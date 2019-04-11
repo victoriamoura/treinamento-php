@@ -1,19 +1,37 @@
 <?php
 
+#--------------
+# OBJETO PESSOA
+#--------------
+
+class Leitor {
+
+	// VARIÁVEIS DO OBJETO
+	public $nome, $idade, $sexo, $dataNasc;
+
+	// FUNÇÃO: CONSTROI OBJETO
+	public function __construct($nome, $idade, $sexo, $dataNasc) {
+		$this->nome = $nome;
+		$this->idade = $idade;
+		$this->sexo = $sexo;
+		$this->dataNasc = $dataNasc;
+	}
+}
+
 #-------------
 # OBJETO LIVRO
 #-------------
 
-class Livro {
+class Livro extends Leitor {
 
 	// VARIÁVEIS DO OBJETO
+	public $leitor;
 	public
 	$titulo,
 	$autor,
 	$totalPaginas,
 	$paginaAtual,
-	$aberto,
-	$leitor;
+	$aberto;
 
 	// FUNÇÃO: CONSTROI OBJETO
 	public function __construct($titulo, $autor, $totalPaginas) {
@@ -29,30 +47,9 @@ class Livro {
 		Autor: {$this->autor} <br>
 		Páginas: {$this->totalPaginas} <br>";
 	}
+
 }
 
-#--------------
-# OBJETO PESSOA
-#--------------
-
-class Pessoa {
-
-	// VARIÁVEIS DO OBJETO
-	protected $nome, $idade, $sexo, $dataNasc;
-
-	// FUNÇÃO: CONSTROI OBJETO
-	public function __construct($nome, $idade, $sexo, $dataNasc) {
-		$this->nome = $nome;
-		$this->idade = $idade;
-		$this->sexo = $sexo;
-		$this->dataNasc = $dataNasc;
-	}
-
-
-	public function checaAniversario($dataNasc) {
-
-	}
-}
 
 // Constroi Objeto: Novo livro
 $livro1 = new Livro('Livro de PHP', 'Victoria', 800, );
