@@ -12,12 +12,12 @@ class Caneta {
     var $tampa;
 
     public function __construct($modelo, $cor, $ponta, $tinta, $tampa) {
-		$this->modelo = $modelo;
-		$this->cor = $cor;
+        $this->modelo = $modelo;
+        $this->cor = $cor;
         $this->ponta = $ponta;
         $this->tinta = $tinta;
         $this->tampa = $tampa;
-	}
+    }
     
     public function exibir() {
         echo self::BREAK_LINE .
